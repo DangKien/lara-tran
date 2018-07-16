@@ -1,0 +1,16 @@
+.tab-setting .nav-tabs {
+	width: 20%;
+    border: 0;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	background-color: #c2c2c2;
+	font-weight: bold;
+}
+
+.tab-base .nav-tabs>li:not(.active)>a {
+	background-color: #e4e4e4;
+}
+.tab-base .tabs-border{
+	border-bottom: 2px solid;
+    padding-bottom: 1px;
+}
