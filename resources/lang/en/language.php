@@ -13,4 +13,5 @@ return array (
   'available' => 'Available',
   'disable' => 'Disable',
   'list' => 'List',
+  'success_message' => 'Actions success',
 );

@@ -1,8 +1,8 @@
 ngApp.factory('$myNotify', ['$rootScope', function ($rootScope) {
     var myNotify = {
-        success: function(message) {
-            var heading   = 'Success';
-            var text      = message;
+        success: function() {
+            var heading   = headingNotifi.success;
+            var text      = messageNotifi.success;
             var position  = position || 'top-right';
             var loaderBg  = '#c6ede0';
             var icon      = 'success';
@@ -17,15 +17,16 @@ ngApp.factory('$myNotify', ['$rootScope', function ($rootScope) {
                       stack: stack,
                   });
         },
-        error: function(message) {
-            var heading   = 'Error';
-            var text      = message;
+        error: function() {
+            var heading   = headingNotifi.failue;
+            var text      = messageNotifi.failue;
             var position  = position || 'top-right';
             var loaderBg  = '#fcd8dc';
             var bgColor   = '#fcd8dc';
             var icon      = 'error';
             var hideAfter = 3000;
             var stack     = 1;
+            console.log(text)
             $.toast({ heading: heading,
                       text: text,
                       position: position,
@@ -36,9 +37,9 @@ ngApp.factory('$myNotify', ['$rootScope', function ($rootScope) {
                   });
         },
 
-        warning: function(message) {
-            var heading   = "Có lỗi";
-            var text      = message;
+        warning: function() {
+            var heading   = headingNotifi.warning;
+            var text      = messageNotifi.warning;
             var position  = position || 'top-right';
             var loaderBg  = '#c6ede0';
             var icon      = 'warning';

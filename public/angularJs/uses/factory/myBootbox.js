@@ -30,13 +30,13 @@ ngApp.factory('$myBootbox', ['$rootScope', function ($rootScope) {
                 callBackTrue  = callBackTrue || function(){};
                 callBackFalse = callBackFalse || function(){};
                 swal({
-                    text: message,
+                    text: textConfirm,
                     type: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#4fa7f3',
                     cancelButtonColor: '#d57171',
-                    confirmButtonText: '確定',
-                    cancelButtonText: '取消'
+                    confirmButtonText: ConfirmBtn.confirm,
+                    cancelButtonText: ConfirmBtn.cancel
                 }).then(callBackTrue, callBackFalse);
             },
 

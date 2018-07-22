@@ -52,4 +52,7 @@ Route::group(['prefix' => 'rest/admin'], function() {
 
     Route::get('languages', 'Backend\LanguagesController@list');
     Route::delete('languages/{id}', 'Backend\LanguagesController@destroy');
+
+    Route::get('categories', 'Backend\CategoryController@list');
+    Route::delete('categories/{id}', 'Backend\CategoryController@destroy');
 });

@@ -11,7 +11,8 @@
         "dimsav/laravel-translatable": "^9.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "yajra/laravel-datatables-oracle": "^8.7"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
@@ -30,7 +31,8 @@
         },
         "files" :
         [
-            "app/Libs/Functions/StatusFunc.php"  
+            "app/Libs/Functions/StatusFunc.php",
+            "app/Libs/Functions/SlugFunc.php" 
         ]
     },
     "autoload-dev": {

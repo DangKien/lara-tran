@@ -15,6 +15,10 @@ ngApp.controller('languageCtrl',function($scope, $myNotify, $myBootbox, $myLoade
 				if (resp) {
 					$scope.data.languages = resp.data.data;
 					$scope.data.page  = resp.data;
+					if ($scope.data.page.current_page > resp.data.last_page) {
+						$scope.data.page.current_page = resp.data.last_page;
+						$scope.actions.getLanguage();
+					}
 				}
 			}, function (error) {
 			})

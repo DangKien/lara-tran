@@ -27,7 +27,7 @@ ngApp.controller('userCtrl',function($scope, $myNotify, $myBootbox, $myLoader, $
 
 		delete: function ($id) {
 			if ($id) {
-				$myBootbox.confirm('您確定要刪除？', function (resp) {
+				$myBootbox.confirm('Bạn muốn xóa?', function (resp) {
 					if (resp) {
 					$userService.action.deleteUser($id).then(function (resp) {
 						if (resp) {

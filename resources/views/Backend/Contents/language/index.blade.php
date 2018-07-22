@@ -87,7 +87,8 @@
 	@if (Session::has('languages') && Session::get('languages') == 'success')
 	<script>
 		$.toast({
-		    heading: 'Thao tác thành công!',
+		    heading: '{!! trans("confirm.success") !!}',
+		    heading: '{!! trans("language.success_message") !!}',
 		    showHideTransition: 'fade',
 		    position: 'top-right',
 		    icon: 'success'

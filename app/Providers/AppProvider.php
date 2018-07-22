@@ -17,6 +17,10 @@ class AppProvider extends ServiceProvider
         $this->app->singleton('Language', function ($app) {
             return new \App\Libs\Providers\Language();
         });
+
+        $this->app->singleton('Category', function ($app) {
+            return new \App\Libs\Providers\Category();
+        });
     }
 
     /**
@@ -26,6 +30,6 @@ class AppProvider extends ServiceProvider
      */
     public function register()
     {
-        return ['Language'];
+        return ['Category'];
     }
 }

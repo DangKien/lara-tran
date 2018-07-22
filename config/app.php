@@ -149,6 +149,7 @@ return [
         DangKien\RolePer\RolePerServiceProvider::class,
         Barryvdh\TranslationManager\ManagerServiceProvider::class,
         Dimsav\Translatable\TranslatableServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -214,6 +215,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'RolePer'   => DangKien\RolePer\RolePerFacade::class,
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
     ],
 

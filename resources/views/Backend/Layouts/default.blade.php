@@ -5,6 +5,21 @@
         <link rel="icon" href="{{ url('Frontend/img/logo_title1.png') }}" type="image/gif" sizes="32x32">
         <script>
             var SiteUrl = '{{url("/")}}';
+            var headingNotifi = {
+                success: '{!! trans("confirm.success")!!}',
+                failue: '{!! trans("confirm.failue")!!}',
+                warning: '{!! trans("confirm.warning") !!}'
+            };
+            var messageNotifi = {
+                success: '{!! trans("confirm.message_success")!!}',
+                failue: '{!! trans("confirm.message_failue")!!}',
+                warning: '{!! trans("confirm.message_warning") !!}'
+            };
+            var ConfirmBtn = {
+                confirm: '{!! trans("confirm.btn_confirm")!!}',
+                cancel: '{!! trans("confirm.btn_cancel")!!}',
+            };
+            var textConfirm = '{!! trans("confirm.text_confirm") !!}';
         </script>
         @includeif ('Backend.Layouts._css_default')
         @includeif ('Backend.Layouts._css')

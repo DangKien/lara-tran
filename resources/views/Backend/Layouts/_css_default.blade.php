@@ -40,3 +40,5 @@
 
 <link href="{{ url('Nifty') }}/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
 
+<link href="{{ url('Nifty') }}/plugins/datatable/datatables.min.css" rel="stylesheet">
+
