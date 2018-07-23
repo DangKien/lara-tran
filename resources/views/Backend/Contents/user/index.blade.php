@@ -58,7 +58,7 @@
 		                                	<a class="btn btn-info btn-icon btn-sm" href="{{ url('admin/users') }}/@{{ user.id }}/edit">
 		                                		{!! trans('user.update') !!}
 		                                	</a>
-		                                	<a class="btn btn-info btn-icon btn-sm" href="{{ url('admin/user-permission') }}/@{{ user.id }}">
+		                                	<a class="btn btn-info btn-icon btn-sm" href="{{ url('admin/users/user-permission') }}/@{{ user.id }}">
 		                                		{!! trans('user.permission') !!}
 		                                	</a>
 		                                	<button class="btn btn-danger btn-sm btn-icon" ng-click="actions.delete(user.id)">
