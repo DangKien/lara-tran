@@ -33,6 +33,9 @@ Route::resource('admin/permissions', '\DangKien\RolePer\Controllers\PermissionCo
 Route::resource('admin/permissions-group', '\DangKien\RolePer\Controllers\PermissionGroupController');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Backend'], function() {
+    Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\controllers\LfmController@show');
+    Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\controllers\UploadController@upload');
+    
     Route::resource('users', 'UserController');
 
     Route::get('users/profile', 'Backend\UserController@show')->name('users.profile');
