@@ -30,3 +30,7 @@
 <script src="{{ url('') }}/Nifty/plugins/parsley/js/parsley.min.js"></script>
 
 <script src="{{ url('') }}/Nifty/plugins/datatable/datatables.min.js"></script>
+
+<script src="{{ url('') }}/Nifty/plugins/datatable/datatables.min.js"></script>
+
+<script src="{{ url('') }}/vendor/laravel-filemanager/js/lfm.js"></script>

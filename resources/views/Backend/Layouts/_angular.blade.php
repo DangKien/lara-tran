@@ -20,6 +20,7 @@
 <script src="{{ url('angularJs/uses/directives') }}/ngEnter.js"></script>
 <script src="{{ url('angularJs/uses/directives') }}/slugText.js"></script>
 <script src="{{ url('angularJs/uses/directives') }}/myRenderImage.js"></script>
+<script src="{{ url('angularJs/uses/directives') }}/myLFM.js"></script>
 
 <!-- services -->
 <script src="{{ url('angularJs/uses/factory') }}/apply.js"></script>

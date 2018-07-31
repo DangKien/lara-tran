@@ -149,7 +149,8 @@ return [
         DangKien\RolePer\RolePerServiceProvider::class,
         Barryvdh\TranslationManager\ManagerServiceProvider::class,
         Dimsav\Translatable\TranslatableServiceProvider::class,
-        Yajra\Datatables\DatatablesServiceProvider::class,
+        UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -163,7 +164,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-         App\Providers\AppProvider::class,
+        App\Providers\AppProvider::class,
 
 
     ],
@@ -215,7 +216,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'RolePer'   => DangKien\RolePer\RolePerFacade::class,
-        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 
