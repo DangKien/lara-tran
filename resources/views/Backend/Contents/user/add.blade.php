@@ -8,7 +8,7 @@
             </div>
             <ol class="breadcrumb">
 			<li><a href="#"><i class="demo-pli-home"></i></a></li>
-			<li><a href="#">{!! trans('user.create') !!}</a></li>
+			<li><a href="#">{!! trans('actions.create') !!}</a></li>
             </ol>
         </div>
 		<div id="page-content">
@@ -67,14 +67,14 @@
 			                        </div>
 			                        <div class="col-sm-10"  style="margin-bottom: 15px;">
 			                            <div class="form-group has-feedback">
-				                            <label class="col-lg-3 control-label" style="padding-top: 10px;">{!! trans('user.status') !!}</label>
+				                            <label class="col-lg-3 control-label" style="padding-top: 10px;">{!! trans('status.status') !!}</label>
 				                            <div class="col-lg-7">
 				                                <div class="radio">
 				                                    <input id="demo-radio-7" class="magic-radio" type="radio" name="status" value="AVAILABLE" data-bv-field="member" checked>
-				                                    <label for="demo-radio-7">{!! trans('user.available') !!} </label>
+				                                    <label for="demo-radio-7">{!! trans('status.available') !!} </label>
 				
 				                                    <input id="demo-radio-8" class="magic-radio" type="radio" name="status" value="DISABLE" data-bv-field="member">
-				                                    <label for="demo-radio-8">{!! trans('user.disable') !!} </label>
+				                                    <label for="demo-radio-8">{!! trans('status.disable') !!} </label>
 				                                </div>
 				                        </div>
 			                        </div>

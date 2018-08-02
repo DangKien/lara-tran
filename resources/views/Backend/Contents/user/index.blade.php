@@ -8,7 +8,7 @@
             </div>
             <ol class="breadcrumb">
 				<li><a href="#"><i class="demo-pli-home"></i></a></li>
-				<li><a href="#">{!! trans('user.list') !!}</a></li>
+				<li><a href="#">{!! trans('actions.list') !!}</a></li>
             </ol>
         </div>
 		<div id="page-content">
@@ -21,7 +21,7 @@
 		            	<div class="pad-btm form-inline">
 				            <div class="row">
 				                <div class="col-sm-6 table-toolbar-left">
-				                   <a href="{{ route('users.create') }}" id="demo-btn-addrow" class="btn btn-purple"><i class="demo-pli-add"></i> {!! trans('user.create') !!}</a>
+				                   <a href="{{ route('users.create') }}" id="demo-btn-addrow" class="btn btn-purple"><i class="demo-pli-add"></i> {!! trans('actions.create') !!}</a>
 				                </div>
 				                <div class="col-sm-6 table-toolbar-right">
 				                    <div class="form-group col-sm-12">
@@ -39,7 +39,7 @@
 		                                <th>{!! trans('user.name') !!}</th>
 		                                <th>{!! trans('user.email') !!}</th>
 		                                <th>{!! trans('user.phone') !!}</th>
-		                                <th>{!! trans('user.status') !!}</th>
+		                                <th>{!! trans('status.status') !!}</th>
 		                                <th>Thao tác</th>
 		                            </tr>
 		                        </thead>
@@ -56,13 +56,13 @@
 			                            </td>
 		                                <td style="width: 250px">
 		                                	<a class="btn btn-info btn-icon btn-sm" href="{{ url('admin/users') }}/@{{ user.id }}/edit">
-		                                		{!! trans('user.update') !!}
+		                                		{!! trans('actions.update') !!}
 		                                	</a>
 		                                	<a class="btn btn-info btn-icon btn-sm" href="{{ url('admin/users/user-permission') }}/@{{ user.id }}">
 		                                		{!! trans('user.permission') !!}
 		                                	</a>
 		                                	<button class="btn btn-danger btn-sm btn-icon" ng-click="actions.delete(user.id)">
-		                                		{!! trans('user.delete') !!}
+		                                		{!! trans('actions.delete') !!}
 		                                	</button>
 		                                </td>
 		                            </tr>

@@ -8,7 +8,7 @@
             </div>
             <ol class="breadcrumb">
 				<li><a href="#"><i class="demo-pli-home"></i></a></li>
-				<li><a href="#">{!! trans('category.list') !!}</a></li>
+				<li><a href="#">{!! trans('actions.list') !!}</a></li>
             </ol>
         </div>
 		<div id="page-content">
@@ -20,7 +20,7 @@
 		            	<div class="pad-btm form-inline">
 				            <div class="row">
 				                <div class="col-sm-6 table-toolbar-left">
-				                   <a href="{{ route('categories.create') }}" id="demo-btn-addrow" class="btn btn-purple"><i class="demo-pli-add"></i> {!! trans('category.create') !!}</a>
+				                   <a href="{{ route('categories.create') }}" id="demo-btn-addrow" class="btn btn-purple"><i class="demo-pli-add"></i> {!! trans('actions.create') !!}</a>
 				                </div>
 				                <div class="col-sm-6 table-toolbar-right">
 				                    <div class="form-group col-sm-12">
@@ -44,7 +44,7 @@
 		                                ng-click="actions.orderBy('name')">{!! trans('category.name') !!}</th>
 		                                <th class="sorting" 
 		                                ng-class="scope.filter.orderBy =='status' && filter.reverse ? 'sorting-desc' : 'sorting-asc' " 
-		                                ng-click="actions.orderBy('status')">{!! trans('category.status') !!}</th>
+		                                ng-click="actions.orderBy('status')">{!! trans('status.status') !!}</th>
 		                                <th>{!! trans('category.action') !!}</th>
 		                            </tr>
 		                        </thead>
@@ -57,17 +57,17 @@
 		                                <td> @{{ actions.findParent(data.categories, category.depth) }} </td>
 		                                <td>
 		                                	<span class="label label-success" ng-if="(category.status == '{{ App\Libs\Configs\StatusConfig::CONST_DISABLE }}')">
-		                                	{!! trans('category.disable') !!}</span>
+		                                	{!! trans('status.disable') !!}</span>
 
 		                                	<span class="label label-success" ng-if="(category.status == '{{ App\Libs\Configs\StatusConfig::CONST_AVAILABLE }}')">
-		                                	{!! trans('category.available') !!}</span>
+		                                	{!! trans('status.available') !!}</span>
 		                                </td>
 		                                <td style="width: 180px">
 		                                	<a href="{{ url('admin/categories') }}/@{{ category.id }}/edit" class="btn btn-info btn-icon btn-sm" >
-		                                		<i class="fa-lg ti-pencil-alt"></i> Cập nhật
+		                                		<i class="fa-lg ti-pencil-alt"></i> {!! trans("actions.edit") !!}
 		                                	</a>
 		                                	<button class="btn btn-danger btn-sm btn-icon" ng-click="actions.delete(category.id)">
-		                                		<i class="fa-lg ti-trash"></i> Xóa
+		                                		<i class="fa-lg ti-trash"></i> {!! trans("actions.delete") !!}
 		                                	</button>
 		                                </td>
 		                            </tr>

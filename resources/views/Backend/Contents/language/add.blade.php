@@ -8,7 +8,7 @@
             </div>
             <ol class="breadcrumb">
 				<li><a href="#"><i class="demo-pli-home"></i></a></li>
-				<li><a href="#">{{ isset($language) ? trans('language.update') : trans('language.create') }}</a></li>
+				<li><a href="#">{{ isset($language) ? trans('actions.update') : trans('actions.create') }}</a></li>
             </ol>
         </div>
 		<div id="page-content">
@@ -18,7 +18,7 @@
 			            <div class="panel-heading">
 			               	<div class="panel-heading">
 				                <h3 class="panel-title text-main text-bold mar-no">
-				                	<i class="ti-pencil"></i> {{ isset($language) ? trans('language.update') : trans('language.create') }} 
+				                	<i class="ti-pencil"></i> {{ isset($language) ? trans('actions.update') : trans('actions.create') }} 
 				                </h3>
 				            </div>
 			            </div>
@@ -74,7 +74,7 @@
 
 	                                <div class="col-sm-10"  style="margin-bottom: 15px;">
 	                                    <div class="form-group has-feedback row">
-	        	                            <label class="col-sm-3 control-label text-bold" style="padding-top: 10px;">{!! trans('language.status') !!}</label>
+	        	                            <label class="col-sm-3 control-label text-bold" style="padding-top: 10px;">{!! trans('status.status') !!}</label>
 	        	                            <div class="col-sm-7">
 	        	                                <div class="radio">
 	        	                                    <input id="AVAILABLE" class="magic-radio" type="radio" name="status" value="{{ App\Libs\Configs\StatusConfig::CONST_AVAILABLE }}" 
@@ -83,13 +83,13 @@
 	        	                                    @endif
 	        	                                    checked 
 	        	                                    >
-	        	                                    <label for="AVAILABLE"> {!! trans('language.available') !!}</label>
+	        	                                    <label for="AVAILABLE"> {!! trans('status.available') !!}</label>
 	        	
 	        	                                    <input id="DISABLE" class="magic-radio" type="radio" name="status" value="{{ App\Libs\Configs\StatusConfig::CONST_DISABLE }}"
             	                                    @if (statusDisable(old('status')))
     													checked
             	                                    @endif>
-	        	                                    <label for="DISABLE"> {!! trans('language.disable') !!}</label>
+	        	                                    <label for="DISABLE"> {!! trans('status.disable') !!}</label>
 	        	                                </div>
 	        	                        	</div>
 	                                	</div>
