@@ -4,11 +4,11 @@
 	<div id="content-container">
 		<div id="page-head">
             <div id="page-title">
-                <h1 class="page-header text-overflow">{!! trans('language.language') !!}</h1>
+                <h1 class="page-header text-overflow">{!! trans('backend.language.language') !!}</h1>
             </div>
             <ol class="breadcrumb">
 				<li><a href="#"><i class="demo-pli-home"></i></a></li>
-				<li><a href="#">{{ isset($language) ? trans('actions.update') : trans('actions.create') }}</a></li>
+				<li><a href="#">{{ isset($language) ? trans('backend.actions.update') : trans('backend.actions.create') }}</a></li>
             </ol>
         </div>
 		<div id="page-content">
@@ -18,7 +18,7 @@
 			            <div class="panel-heading">
 			               	<div class="panel-heading">
 				                <h3 class="panel-title text-main text-bold mar-no">
-				                	<i class="ti-pencil"></i> {{ isset($language) ? trans('actions.update') : trans('actions.create') }} 
+				                	<i class="ti-pencil"></i> {{ isset($language) ? trans('backend.actions.update') : trans('backend.actions.create') }} 
 				                </h3>
 				            </div>
 			            </div>
@@ -36,7 +36,7 @@
     		                    <div class="row">
     		                        <div class="col-sm-10">
     		                            <div class="form-group">
-    		                                <label class="control-label text-bold">{!! trans('language.name') !!}
+    		                                <label class="control-label text-bold">{!! trans('backend.language.name') !!}
     		                                	<span class="text-danger">*</span>
     		                                </label>
     		                                <input type="text" name="name_display" class="form-control"
@@ -48,7 +48,7 @@
     		                        </div> 
     		                        <div class="col-sm-10">
     		                            <div class="form-group">
-    		                                <label class="control-label text-bold">{!! trans('language.code') !!}
+    		                                <label class="control-label text-bold">{!! trans('backend.language.code') !!}
     		                                	<span class="text-danger">*</span>
     		                                </label>
     		                                <input type="text" name="locale" class="form-control" 
@@ -61,7 +61,7 @@
 
     		                        <div class="col-sm-10">
     		                            <div class="form-group">
-    		                                <label class="control-label text-bold">{!! trans('language.icon') !!}
+    		                                <label class="control-label text-bold">{!! trans('backend.language.icon') !!}
     		                                	<span class="text-danger">*</span>
     		                                </label>
     		                                <input type="text" name="icon" class="form-control"
@@ -74,7 +74,7 @@
 
 	                                <div class="col-sm-10"  style="margin-bottom: 15px;">
 	                                    <div class="form-group has-feedback row">
-	        	                            <label class="col-sm-3 control-label text-bold" style="padding-top: 10px;">{!! trans('status.status') !!}</label>
+	        	                            <label class="col-sm-3 control-label text-bold" style="padding-top: 10px;">{!! trans('backend.status.status') !!}</label>
 	        	                            <div class="col-sm-7">
 	        	                                <div class="radio">
 	        	                                    <input id="AVAILABLE" class="magic-radio" type="radio" name="status" value="{{ App\Libs\Configs\StatusConfig::CONST_AVAILABLE }}" 
@@ -83,13 +83,13 @@
 	        	                                    @endif
 	        	                                    checked 
 	        	                                    >
-	        	                                    <label for="AVAILABLE"> {!! trans('status.available') !!}</label>
+	        	                                    <label for="AVAILABLE"> {!! trans('backend.status.available') !!}</label>
 	        	
 	        	                                    <input id="DISABLE" class="magic-radio" type="radio" name="status" value="{{ App\Libs\Configs\StatusConfig::CONST_DISABLE }}"
             	                                    @if (statusDisable(old('status')))
     													checked
             	                                    @endif>
-	        	                                    <label for="DISABLE"> {!! trans('status.disable') !!}</label>
+	        	                                    <label for="DISABLE"> {!! trans('backend.status.disable') !!}</label>
 	        	                                </div>
 	        	                        	</div>
 	                                	</div>

@@ -4,11 +4,11 @@
 	<div id="content-container" ng-controller="languageCtrl">
 		<div id="page-head">
             <div id="page-title">
-                <h1 class="page-header text-overflow">{!! trans('language.language') !!}</h1>
+                <h1 class="page-header text-overflow">{!! trans('backend.language.language') !!}</h1>
             </div>
             <ol class="breadcrumb">
 				<li><a href="#"><i class="demo-pli-home"></i></a></li>
-				<li><a href="#">{{ trans("actions.list") }}</a></li>
+				<li><a href="#">{{ trans("backend.actions.list") }}</a></li>
             </ol>
         </div>
 		<div id="page-content">
@@ -20,7 +20,7 @@
 		            	<div class="pad-btm form-inline">
 				            <div class="row">
 				                <div class="col-sm-6 table-toolbar-left">
-				                   <a href="{{ route('languages.create') }}" id="demo-btn-addrow" class="btn btn-purple"><i class="demo-pli-add"></i> {!! trans('actions.create') !!}</a>
+				                   <a href="{{ route('languages.create') }}" id="demo-btn-addrow" class="btn btn-purple"><i class="demo-pli-add"></i> {!! trans('backend.actions.create') !!}</a>
 				                </div>
 				                <div class="col-sm-6 table-toolbar-right">
 				                    <div class="form-group col-sm-12">
@@ -35,11 +35,11 @@
 		                        <thead>
 		                            <tr>
 		                                <th class="text-center">#</th>
-		                                <th>{!! trans('language.name') !!}</th>
-		                                <th>{!! trans('language.code') !!}</th>
-		                                <th>{!! trans('language.icon') !!}</th>
-		                                <th>{!! trans('status.status') !!}</th>
-		                                <th>{!! trans('language.actions') !!}</th>
+		                                <th>{!! trans('backend.language.name') !!}</th>
+		                                <th>{!! trans('backend.language.code') !!}</th>
+		                                <th>{!! trans('backend.language.icon') !!}</th>
+		                                <th>{!! trans('backend.status.status') !!}</th>
+		                                <th>{!! trans('backend.language.actions') !!}</th>
 		                            </tr>
 		                        </thead>
 		                        <tbody>
@@ -49,16 +49,16 @@
 		                                <td>@{{language.locale}}</td>
 		                                <td><i class="@{{language.icon}}"></i></td>
 		                                <td>
-		                                	<span ng-if="(language.status == '{{ App\Libs\Configs\StatusConfig::CONST_DISABLE }}')"> {!! trans('status.disable') !!}</span>
+		                                	<span ng-if="(language.status == '{{ App\Libs\Configs\StatusConfig::CONST_DISABLE }}')"> {!! trans('backend.status.disable') !!}</span>
 
-		                                	<span ng-if="(language.status == '{{ App\Libs\Configs\StatusConfig::CONST_AVAILABLE }}')"> {!! trans('status.available') !!}</span>
+		                                	<span ng-if="(language.status == '{{ App\Libs\Configs\StatusConfig::CONST_AVAILABLE }}')"> {!! trans('backend.status.available') !!}</span>
 		                                </td>
 		                                <td style="width: 180px">
 		                                	<a href="{{ url('admin/languages') }}/@{{ language.id }}/edit" class="btn btn-info btn-icon btn-sm" >
-		                                		<i class="fa-lg ti-pencil-alt"></i> {!! trans('actions.update') !!}
+		                                		<i class="fa-lg ti-pencil-alt"></i> {!! trans('backend.actions.update') !!}
 		                                	</a>
 		                                	<button class="btn btn-danger btn-sm btn-icon" ng-click="actions.delete(language.id)">
-		                                		<i class="fa-lg ti-trash"></i> {!! trans('actions.delete') !!}
+		                                		<i class="fa-lg ti-trash"></i> {!! trans('backend.actions.delete') !!}
 		                                	</button>
 		                                </td>
 		                            </tr>
@@ -87,8 +87,8 @@
 	@if (Session::has('languages') && Session::get('languages') == 'success')
 	<script>
 		$.toast({
-		    heading: '{!! trans("confirm.success") !!}',
-		    heading: '{!! trans("language.success_message") !!}',
+		    heading: '{!! trans("backend.confirm.success") !!}',
+		    heading: '{!! trans("backend.language.success_message") !!}',
 		    showHideTransition: 'fade',
 		    position: 'top-right',
 		    icon: 'success'

@@ -4,11 +4,11 @@
 	<div id="content-container">
 		<div id="page-head">
             <div id="page-title">
-                <h1 class="page-header text-overflow">{!! trans('user.change_password') !!} </h1>
+                <h1 class="page-header text-overflow">{!! trans('backend.user.change_password') !!} </h1>
             </div>
             <ol class="breadcrumb">
 			<li><a href="#"><i class="demo-pli-home"></i></a></li>
-			<li><a href="#"> {!! trans('user.change_password') !!} </a></li>
+			<li><a href="#"> {!! trans('backend.user.change_password') !!} </a></li>
             </ol>
         </div>
 		<div id="page-content">
@@ -25,7 +25,7 @@
 			                    <div class="row">
 			                        <div class="col-sm-10">
 			                            <div class="form-group">
-			                                <label class="control-label">{!! trans('user.password') !!} </label>
+			                                <label class="control-label">{!! trans('backend.user.password') !!} </label>
 			                                <input type="password" name="password" class="form-control">
 			                                @if ($errors->has('password'))
 				                            	<p class="text-left text-danger">{{ $errors->first('password') }}</p>
@@ -34,7 +34,7 @@
 			                        </div> 
 			                        <div class="col-sm-10">
 			                            <div class="form-group">
-			                                <label class="control-label">{!! trans('user.confirm_password') !!} </label>
+			                                <label class="control-label">{!! trans('backend.user.confirm_password') !!} </label>
 			                                <input type="password" name="confirm" class="form-control">
 			                                @if ($errors->has('confirm'))
 				                            	<p class="text-left text-danger">{{ $errors->first('confirm') }}</p>

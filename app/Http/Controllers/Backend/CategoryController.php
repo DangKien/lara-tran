@@ -202,9 +202,9 @@ class CategoryController extends Controller
                     );
         $messages = array();
         $attribute = array(
-            'name.*'    => trans('category.name'),
-            'parent_id' => trans('category.parent'),
-            'status'    => trans('status')
+            'name.*'    => trans('backend.category.name'),
+            'parent_id' => trans('backend.category.parent'),
+            'status'    => trans('backend.status')
         );
 
         $this->validate($request, $rules, $messages, $attribute);

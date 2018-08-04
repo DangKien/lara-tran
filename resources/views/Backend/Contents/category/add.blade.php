@@ -4,11 +4,11 @@
 <div id="content-container">
 	<div id="page-head">
         <div id="page-title">
-            <h1 class="page-header text-overflow"> {!! trans('category.category') !!} </h1>
+            <h1 class="page-header text-overflow"> {!! trans('backend.category.category') !!} </h1>
         </div>
         <ol class="breadcrumb">
 			<li><a href="#"><i class="demo-pli-home"></i></a></li>
-			<li><a href="#">{{ isset($category) ? trans('actions.update') : trans('actions.create') }}</a></li>
+			<li><a href="#">{{ isset($category) ? trans('backend.actions.update') : trans('backend.actions.create') }}</a></li>
         </ol>
     </div>
     @php
@@ -21,7 +21,7 @@
 		            <div class="panel-heading">
 		               	<div class="panel-heading">
 			                <h3 class="panel-title text-main text-bold mar-no">
-			                	<i class="ti-pencil"></i> {{ isset($category) ? trans('actions.update') : trans('actions.create') }} 
+			                	<i class="ti-pencil"></i> {{ isset($category) ? trans('backend.actions.update') : trans('backend.actions.create') }} 
 			                </h3>
 			            </div>
 		            </div>
@@ -29,13 +29,12 @@
 	                <div class="panel-body">
 	                	<div class="col-md-12">
 	                		<div class="tab-base">
-	                		    <!--Nav Tabs-->
 	                		    <ul class="nav nav-tabs tabs-border">
 	                		        <li class="active">
-	                		            <a data-toggle="tab" href="#demo-lft-tab-1">{!! trans('category.garena') !!}</a>
+	                		            <a data-toggle="tab" href="#demo-lft-tab-1">{!! trans('backend.category.garena') !!}</a>
 	                		        </li>
 	                		        <li>
-	                		            <a data-toggle="tab" href="#demo-lft-tab-2">{!! trans('category.detail') !!}</a>
+	                		            <a data-toggle="tab" href="#demo-lft-tab-2">{!! trans('backend.category.detail') !!}</a>
 	                		        </li>
 	                		    </ul>
 	                			@if (isset($category))
@@ -75,7 +74,7 @@
 									                        <div class="col-sm-10">
 									                            <div class="form-group">
 									                                <label class="control-label text-bold">
-									                                	{!! trans('category.name') !!}
+									                                	{!! trans('backend.category.name') !!}
 									                                	<span class="text-danger">*</span>
 									                                </label>
 
@@ -90,17 +89,17 @@
 									                        <div class="col-sm-10">
 							                                    <div class="form-group">
 							                                        <label class="control-label text-bold">
-							                                        	{!! trans('category.description') !!}
+							                                        	{!! trans('backend.category.description') !!}
 							                                        	<span class="text-danger">*</span>
 							                                        </label>
 
-							                                        <textarea name="description[{{ @$languageTab->id }}]" placeholder="{!! trans('category.description') !!}" rows="5" class="form-control">{{ @$recordCategory->description ? $recordCategory->description : old('description.'.@$languageTab->id) }}</textarea>
+							                                        <textarea name="description[{{ @$languageTab->id }}]" placeholder="{!! trans('backend.category.description') !!}" rows="5" class="form-control">{{ @$recordCategory->description ? $recordCategory->description : old('description.'.@$languageTab->id) }}</textarea>
 							                                    </div>
 							                                </div>
 							                                <div class="col-sm-10">
 							                                    <div class="form-group">
 							                                        <label class="control-label text-bold">
-							                                        	{!! trans('category.meta_title') !!}
+							                                        	{!! trans('backend.category.meta_title') !!}
 							                                        	<span class="text-danger">*</span>
 							                                        </label>
 
@@ -110,19 +109,19 @@
 									                        <div class="col-sm-10">
 									                            <div class="form-group">
 									                                <label class="control-label text-bold">
-									                                	{!! trans('category.meta_description') !!} 
+									                                	{!! trans('backend.category.meta_description') !!} 
 									                                	<span class="text-danger">*</span>
 									                                </label>
-									                                <textarea name="meta_description[{{ @$languageTab->id }}]" placeholder="{!! trans('category.meta_description') !!}" rows="5" class="form-control">{{ @$recordCategory->meta_description ? $recordCategory->meta_description : old('meta_description.'.@$languageTab->id) }}</textarea>
+									                                <textarea name="meta_description[{{ @$languageTab->id }}]" placeholder="{!! trans('backend.category.meta_description') !!}" rows="5" class="form-control">{{ @$recordCategory->meta_description ? $recordCategory->meta_description : old('meta_description.'.@$languageTab->id) }}</textarea>
 									                            </div>
 									                        </div>
 							                                <div class="col-sm-10">
 							                                    <div class="form-group">
 							                                        <label class="control-label text-bold">
-							                                        	{!! trans('category.meta_content') !!}
+							                                        	{!! trans('backend.category.meta_content') !!}
 							                                        	<span class="text-danger">*</span>
 							                                        </label>
-							                                        <textarea name="meta_content[{{ @$languageTab->id }}]" placeholder="{!! trans('category.meta_content') !!}" rows="5" class="form-control">{{ @$recordCategory->meta_data ? @$recordCategory->meta_data : old('meta_content.'.@$languageTab->id)}}</textarea>
+							                                        <textarea name="meta_content[{{ @$languageTab->id }}]" placeholder="{!! trans('backend.category.meta_content') !!}" rows="5" class="form-control">{{ @$recordCategory->meta_data ? @$recordCategory->meta_data : old('meta_content.'.@$languageTab->id)}}</textarea>
 							                                    </div>
 							                                </div>
 						                            	</div>
@@ -140,7 +139,7 @@
 				    		                        <div class="col-sm-10">
 				    		                            <div class="form-group">
 				    		                                <label class="control-label text-bold">
-				    		                                	{!! trans('category.parent') !!}
+				    		                                	{!! trans('backend.category.parent') !!}
 				    		                                	<span class="text-danger">*</span>
 				    		                                	
 				    		                                </label>
@@ -157,7 +156,7 @@
 					                                <div class="col-sm-10"  style="margin-bottom: 15px;">
 					                                	
 					                                    <div class="form-group has-feedback row">
-					        	                            <label class="col-sm-3 control-label text-bold" style="padding-top: 10px;">{!! trans('status.status') !!}
+					        	                            <label class="col-sm-3 control-label text-bold" style="padding-top: 10px;">{!! trans('backend.status.status') !!}
 					        	                            </label>
 					        	                            <div class="col-sm-7">
 					        	                                <div class="radio">
@@ -167,13 +166,13 @@
 					        	                                    @endif
 					        	                                    checked 
 					        	                                    >
-					        	                                    <label for="AVAILABLE">{!! trans('status.available') !!}</label>
+					        	                                    <label for="AVAILABLE">{!! trans('backend.status.available') !!}</label>
 					        	
 					        	                                    <input id="DISABLE" class="magic-radio" type="radio" name="status" value="{{ App\Libs\Configs\StatusConfig::CONST_DISABLE }}"
 				            	                                    @if (statusDisable(old('status')) || statusDisable(@$category->status) )
 				    													checked
 				            	                                    @endif>
-					        	                                    <label for="DISABLE"> {!! trans('status.disable') !!}</label>
+					        	                                    <label for="DISABLE"> {!! trans('backend.status.disable') !!}</label>
 					        	                                </div>
 					        	                        	</div>
 					                                	</div>

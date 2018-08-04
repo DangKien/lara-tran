@@ -4,11 +4,11 @@
 	<div id="content-container" ng-controller="categoryCtrl">
 		<div id="page-head">
             <div id="page-title">
-                <h1 class="page-header text-overflow">{!! trans('category.category') !!}</h1>
+                <h1 class="page-header text-overflow">{!! trans('backend.category.category') !!}</h1>
             </div>
             <ol class="breadcrumb">
 				<li><a href="#"><i class="demo-pli-home"></i></a></li>
-				<li><a href="#">{!! trans('actions.list') !!}</a></li>
+				<li><a href="#">{!! trans('backend.actions.list') !!}</a></li>
             </ol>
         </div>
 		<div id="page-content">
@@ -20,7 +20,7 @@
 		            	<div class="pad-btm form-inline">
 				            <div class="row">
 				                <div class="col-sm-6 table-toolbar-left">
-				                   <a href="{{ route('categories.create') }}" id="demo-btn-addrow" class="btn btn-purple"><i class="demo-pli-add"></i> {!! trans('actions.create') !!}</a>
+				                   <a href="{{ route('categories.create') }}" id="demo-btn-addrow" class="btn btn-purple"><i class="demo-pli-add"></i> {!! trans('backend.actions.create') !!}</a>
 				                </div>
 				                <div class="col-sm-6 table-toolbar-right">
 				                    <div class="form-group col-sm-12">
@@ -41,11 +41,11 @@
 		                                <th class="text-center">#</th>
 		                                <th class="sorting" 
 		                                ng-class="scope.filter.orderBy =='name' && filter.reverse ? 'sorting-desc' : 'sorting-asc' " 
-		                                ng-click="actions.orderBy('name')">{!! trans('category.name') !!}</th>
+		                                ng-click="actions.orderBy('name')">{!! trans('backend.category.name') !!}</th>
 		                                <th class="sorting" 
 		                                ng-class="scope.filter.orderBy =='status' && filter.reverse ? 'sorting-desc' : 'sorting-asc' " 
-		                                ng-click="actions.orderBy('status')">{!! trans('status.status') !!}</th>
-		                                <th>{!! trans('category.action') !!}</th>
+		                                ng-click="actions.orderBy('status')">{!! trans('backend.status.status') !!}</th>
+		                                <th>{!! trans('backend.category.action') !!}</th>
 		                            </tr>
 		                        </thead>
 		                        <tbody>
@@ -57,10 +57,10 @@
 		                                <td> @{{ actions.findParent(data.categories, category.depth) }} </td>
 		                                <td>
 		                                	<span class="label label-success" ng-if="(category.status == '{{ App\Libs\Configs\StatusConfig::CONST_DISABLE }}')">
-		                                	{!! trans('status.disable') !!}</span>
+		                                	{!! trans('backend.status.disable') !!}</span>
 
 		                                	<span class="label label-success" ng-if="(category.status == '{{ App\Libs\Configs\StatusConfig::CONST_AVAILABLE }}')">
-		                                	{!! trans('status.available') !!}</span>
+		                                	{!! trans('backend.status.available') !!}</span>
 		                                </td>
 		                                <td style="width: 180px">
 		                                	<a href="{{ url('admin/categories') }}/@{{ category.id }}/edit" class="btn btn-info btn-icon btn-sm" >
@@ -98,7 +98,7 @@
 	<script>
 		$.toast({
 		    heading: '{!! trans("confirm.success") !!}',
-		    text: '{!! trans("category.success_message") !!}',
+		    text: '{!! trans("backend.category.success_message") !!}',
 		    showHideTransition: 'fade',
 		    position: 'top-right',
 		    icon: 'success'
