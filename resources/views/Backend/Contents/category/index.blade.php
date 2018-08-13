@@ -24,7 +24,7 @@
 				                </div>
 				                <div class="col-sm-6 table-toolbar-right">
 				                    <div class="form-group col-sm-12">
-				                        <input id="demo-input-search2" type="text" placeholder="Tìm kiếm" class="form-control col-sm-
+				                        <input id="demo-input-search2" type="text" placeholder="{!! trans('backend.actions.seacrh') !!}" class="form-control col-sm-
 				                        8" autocomplete="off" ng-change="actions.filter()" ng-model="filter.freetext">
 				                    </div>
 				                </div>
@@ -64,10 +64,10 @@
 		                                </td>
 		                                <td style="width: 180px">
 		                                	<a href="{{ url('admin/categories') }}/@{{ category.id }}/edit" class="btn btn-info btn-icon btn-sm" >
-		                                		<i class="fa-lg ti-pencil-alt"></i> {!! trans("actions.edit") !!}
+		                                		<i class="fa-lg ti-pencil-alt"></i> {!! trans("backend.actions.edit") !!}
 		                                	</a>
 		                                	<button class="btn btn-danger btn-sm btn-icon" ng-click="actions.delete(category.id)">
-		                                		<i class="fa-lg ti-trash"></i> {!! trans("actions.delete") !!}
+		                                		<i class="fa-lg ti-trash"></i> {!! trans("backend.actions.delete") !!}
 		                                	</button>
 		                                </td>
 		                            </tr>

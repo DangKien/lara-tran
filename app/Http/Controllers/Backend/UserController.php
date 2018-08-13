@@ -229,22 +229,31 @@ class UserController extends Controller
     }
 
     public function _validateInsert($request){
-        return $this->validate($request, [
+        $attribute = array(
+            'name'  => trans('backend.user.name'),
+            'email' => trans('backend.user.email'),
+            'phone' => trans('backend.user.phone')
+        );
+        $rules  = array(
             'name'    => 'required|max:255',
             'email'   => 'required|max:255|email',
             'phone'   => 'required|max:15',
-        ], [
-        ]
-       );
+        );
+        $messages = array();
+        return $this->validate($request, $rules, $messages, $attribute);
     }
 
     public function _validateUpdate($request){
-        return $this->validate($request, [
+        $attribute = array(
+            'name'  => trans('backend.user.name'),
+            'phone' => trans('backend.user.phone')
+        );
+        $rules  = array(
             'name'    => 'required|max:255',
             'phone'   => 'required|max:15',
-        ], [
-        ]
-       );
+        );
+        $messages = array();
+        return $this->validate($request, $rules, $messages, $attribute);
     }
 
     

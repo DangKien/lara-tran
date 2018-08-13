@@ -52,7 +52,7 @@ class LoginController extends Controller
     protected function validateLogin(Request $request)
     {
         $this->validate($request, [
-            'email' => 'required|string',
+            $this->username() => 'required|string',
             'password' => 'required|string',
         ]);
     }
@@ -72,7 +72,9 @@ class LoginController extends Controller
 
     protected function sendFailedLoginResponse(Request $request)
     {
-        // throw ValidationException::withMessages();
+        throw ValidationException::withMessages([
+            $this->username() => [trans('auth.failed')],
+        ]);
     }
 
     /**

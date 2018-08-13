@@ -2,6 +2,10 @@
 
 return [
 
+    'login' => [
+        "login" => 'admin/login',
+        "redirect_true" => 'admin/users',
+    ],
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults

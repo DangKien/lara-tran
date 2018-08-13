@@ -31,11 +31,11 @@ ngApp.controller('userCtrl',function($scope, $myNotify, $myBootbox, $myLoader, $
 					if (resp) {
 					$userService.action.deleteUser($id).then(function (resp) {
 						if (resp) {
-							$myNotify.success('成功！');
+							$myNotify.success('');
 							$scope.actions.getAboutTeam();
 						}
 						}, function (error) {
-							$myNotify.error('失敗!');
+							$myNotify.error('');
 						})
 					}
 				})

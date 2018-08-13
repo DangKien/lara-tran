@@ -16,7 +16,7 @@
                     </div>
                     <ul id="mainnav-menu" class="list-group">
                         <li class="list-divider"></li>
-                        <li class="list-header">{!! trans('menu.manager')  !!}</li> 
+                        <li class="list-header">{!! trans('backend.menu.manager')  !!}</li> 
 
                         <li class="
                                 {{ request()->is('admin/categories') 
@@ -24,13 +24,13 @@
                                 ? 'active-sub active': '' }}">
                             <a href="#">
                                 <i class="ti-settings"></i>
-                                <span class="menu-title">{!! trans('menu.product')  !!}</span>
+                                <span class="menu-title">{!! trans('backend.menu.product')  !!}</span>
                                 <i class="arrow"></i>
                             </a>                    
                             <ul class="collapse">
                                 <li class="{{ request()->is('admin/categories') || request()->is('admin/categories/*') ? 'active-link': '' }}">
                                     <a href="{{ route('categories.index') }}"><i class="ti-angle-double-right">
-                                    </i>{!! trans('menu.category')  !!}</a>
+                                    </i>{!! trans('backend.menu.category')  !!}</a>
                                 </li>
                             </ul>
                         </li>
@@ -43,16 +43,16 @@
                                 ? 'active-sub active': '' }}">
                             <a href="#">
                                 <i class="demo-pli-male"></i>
-                                <span class="menu-title">{!! trans('menu.users')  !!}</span>
+                                <span class="menu-title">{!! trans('backend.menu.users')  !!}</span>
                                 <i class="arrow"></i>
                             </a>                    
                             <ul class="collapse">
                                 <li class="{{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active-link': '' }}">
                                     <a href="{{ route('users.index') }}"><i class="ti-angle-double-right">
-                                    </i>{!! trans('menu.users')  !!}</a>
+                                    </i>{!! trans('backend.menu.users') !!}</a>
                                 </li>
                                 <li class="{{ request()->is('admin/roles') || request()->is('admin/roles/*') ? 'active-link': '' }}">
-                                    <a href="{{ route('roles.index') }}"><i class="ti-angle-double-right"></i>{!! trans('menu.role')  !!}</a>
+                                    <a href="{{ route('roles.index') }}"><i class="ti-angle-double-right"></i>{!! trans('backend.menu.role')  !!}</a>
                                 </li>
                             </ul>
                         </li>
@@ -62,13 +62,13 @@
                                 ? 'active-sub active': '' }}">
                             <a href="#">
                                 <i class="ti-settings"></i>
-                                <span class="menu-title">{!! trans('menu.setting')  !!}</span>
+                                <span class="menu-title">{!! trans('backend.menu.setting')  !!}</span>
                                 <i class="arrow"></i>
                             </a>                    
                             <ul class="collapse">
                                 <li class="{{ request()->is('admin/languages') || request()->is('admin/languages/*') ? 'active-link': '' }}">
                                     <a href="{{ route('languages.index') }}"><i class="ti-angle-double-right">
-                                    </i>{!! trans('menu.language')  !!}</a>
+                                    </i>{!! trans('backend.menu.language')  !!}</a>
                                 </li>
                             </ul>
                         </li>

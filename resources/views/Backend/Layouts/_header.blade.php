@@ -4,7 +4,7 @@
             <a href="index.html" class="navbar-brand">
                 <img src="{{ url('Nifty') }}/img/logo.png" alt="Nifty Logo" class="brand-icon">
                 <div class="brand-title">
-                    <span class="brand-text">Nifty</span>
+                    <span class="brand-text">{{ trans('backend.name_website') }}</span>
                 </div>
             </a>
         </div>
@@ -38,13 +38,13 @@
                     <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right panel-default">
                         <ul class="head-list">
                             <li>
-                                <a href="{{ route('users.profile') }}"><i class="demo-pli-male icon-lg icon-fw"></i> {!! trans('menu.profile') !!}</a>
+                                <a href="{{ route('users.profile') }}"><i class="demo-pli-male icon-lg icon-fw"></i> {!! trans('backend.menu.profile') !!}</a>
                             </li>
                             <li>
-                                <a href="{{ route('users.change') }}"><i class="demo-pli-male icon-lg icon-fw"></i>{!! trans('menu.change_password') !!}</a>
+                                <a href="{{ route('users.change') }}"><i class="demo-pli-male icon-lg icon-fw"></i>{!! trans('backend.menu.change_password') !!}</a>
                             </li>
                             <li>
-                                <a href="{{ route('logout') }}"><i class="demo-pli-unlock icon-lg icon-fw"></i> {!! trans('menu.logout') !!}</a>
+                                <a href="{{ route('logout') }}"><i class="demo-pli-unlock icon-lg icon-fw"></i> {!! trans('backend.menu.logout') !!}</a>
                             </li>
                         </ul>
                     </div>

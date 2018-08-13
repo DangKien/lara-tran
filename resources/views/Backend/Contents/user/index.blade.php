@@ -25,7 +25,7 @@
 				                </div>
 				                <div class="col-sm-6 table-toolbar-right">
 				                    <div class="form-group col-sm-12">
-				                        <input id="demo-input-search2" type="text" placeholder="Tìm kiếm" class="form-control col-sm-
+				                        <input id="demo-input-search2" type="text" placeholder="{!! trans('backend.actions.search') !!}" class="form-control col-sm-
 				                        8" autocomplete="off" ng-change="actions.filter()" ng-model="filter.freetext">
 				                    </div>
 				                </div>
@@ -40,7 +40,7 @@
 		                                <th>{!! trans('backend.user.email') !!}</th>
 		                                <th>{!! trans('backend.user.phone') !!}</th>
 		                                <th>{!! trans('backend.status.status') !!}</th>
-		                                <th>Thao tác</th>
+		                                <th>{!! trans('backend.actions.actions') !!}</th>
 		                            </tr>
 		                        </thead>
 		                        <tbody>
@@ -56,13 +56,12 @@
 			                            </td>
 		                                <td style="width: 250px">
 		                                	<a class="btn btn-info btn-icon btn-sm" href="{{ url('admin/users') }}/@{{ user.id }}/edit">
-		                                		{!! trans('backend.actions.update') !!}
+		                                		<i class="fa-lg ti-pencil-alt"></i> {!! trans('backend.actions.edit') !!}
 		                                	</a>
-		                                	<a class="btn btn-info btn-icon btn-sm" href="{{ url('admin/users/user-permission') }}/@{{ user.id }}">
-		                                		{!! trans('backend.user.permission') !!}
+		                                	<a class="btn btn-info btn-icon btn-sm" href="{{ url('admin/users/user-permission') }}/@{{ user.id }}">{!! trans('backend.user.permission') !!}
 		                                	</a>
 		                                	<button class="btn btn-danger btn-sm btn-icon" ng-click="actions.delete(user.id)">
-		                                		{!! trans('backend.actions.delete') !!}
+		                                		<i class="fa-lg ti-trash"></i> {!! trans('backend.actions.delete') !!}
 		                                	</button>
 		                                </td>
 		                            </tr>
@@ -92,7 +91,8 @@
 	@if (Session::has('users') && Session::get('users') == 'success')
 	<script>
 		$.toast({
-		    heading: '成功！',
+		    heading: '{{ trans("backend.user.user") }}',
+		    text: '{{ trans("confirm.message_success") }}',
 		    showHideTransition: 'fade',
 		    position: 'top-right',
 		    icon: 'success'

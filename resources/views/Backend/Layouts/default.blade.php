@@ -11,7 +11,7 @@
                 warning: '{!! trans("confirm.warning") !!}'
             };
             var messageNotifi = {
-                success: '{!! trans("confirm.message_success")!!}',
+                success: '{!! trans("confirm.message_success") !!}',
                 failue: '{!! trans("confirm.message_failue")!!}',
                 warning: '{!! trans("confirm.message_warning") !!}'
             };
