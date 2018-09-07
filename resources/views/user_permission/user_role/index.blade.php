@@ -19,7 +19,8 @@
 			                
 			            </div>
 			            @php
-							$roles = \App\Models\Role::select('id', 'display_name', 'name')->get();
+							$roles = \App\Models\Role::all();
+
 			            @endphp
 			            <div class="panel-body">
 			            	<form action="{{ route('user-permission.store', $user->id) }}" method="POST" accept-charset="utf-8" enctype="multipart/form-data">

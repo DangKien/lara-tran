@@ -66,12 +66,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DangKien/role-permisson.git",
-                "reference": "dd0726dc40642f3033b69eb4275a575d1c514b3b"
+                "reference": "af0373a25b1ff89e21bd6390fcacc97be5bffec6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DangKien/role-permisson/zipball/dd0726dc40642f3033b69eb4275a575d1c514b3b",
-                "reference": "dd0726dc40642f3033b69eb4275a575d1c514b3b",
+                "url": "https://api.github.com/repos/DangKien/role-permisson/zipball/af0373a25b1ff89e21bd6390fcacc97be5bffec6",
+                "reference": "af0373a25b1ff89e21bd6390fcacc97be5bffec6",
                 "shasum": ""
             },
             "require": {
@@ -126,7 +126,7 @@
                 "permission",
                 "roles"
             ],
-            "time": "2018-09-07T03:27:15+00:00"
+            "time": "2018-09-07T10:06:54+00:00"
         },
         {
             "name": "dimsav/laravel-translatable",

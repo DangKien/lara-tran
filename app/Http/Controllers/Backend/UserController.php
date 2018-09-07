@@ -13,6 +13,15 @@ class UserController extends Controller
     public function __construct(User $userModel)
     {
         $this->userModel = $userModel;
+
+        $this->middleware('permission:user.read', ['only' => ['list']]);
+        $this->middleware('permission:user.read', ['only' => ['index']]);
+        $this->middleware('permission:user.create',['only' => ['create']]);
+        $this->middleware('permission:user.create', ['only' => ['store']]);
+        $this->middleware('permission:user.read', ['only' => ['show']]);
+        $this->middleware('permission:user.update', ['only' => ['edit']]);
+        $this->middleware('permission:user.update', ['only' => ['update']]);
+        $this->middleware('permission:user.delete', ['only' => ['destroy']]);
     }
     /**
      * Display a listing of the resource.
@@ -136,7 +145,7 @@ class UserController extends Controller
             return redirect()->route('users.index')->with('users', 'success');
         } catch (Exception $e) {
             DB::rollback();
-            return view('Backend.Contents.aboutTeam.update');
+            return view('Backend.Contents.user.update');
         }
     }
 
@@ -149,13 +158,13 @@ class UserController extends Controller
     public function destroy($id)
     {
         if (isset($id) && Auth::check() && $id != Auth::user()->id) {
-            $aboutTeam = $this->userModel::find($id);
-            if (empty($aboutTeam)) {
+            $user = $this->userModel::findOrFail($id);
+            if (empty($user) || $user->hasRole(config('roleper.superadmin')) ) {
                 return response()->json(['status' => false], 422);
             } else {
                 DB::beginTransaction();
                 try {
-                    $aboutTeam->delete();
+                    $user->delete();
                     DB::commit();
                     return response()->json(['status' => true], 200);
                 } catch (Exception $e) {
