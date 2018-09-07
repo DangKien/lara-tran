@@ -10,6 +10,7 @@ return array (
     'edit' => 'Edit',
     'create' => 'Create',
     'search' => 'Search',
+    'submit' => 'Submit',
   ),
   'category' => 
   array (

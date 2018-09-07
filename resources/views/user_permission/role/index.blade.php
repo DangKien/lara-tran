@@ -4,11 +4,11 @@
 	<div id="content-container">
 		<div id="page-head">
             <div id="page-title">
-                <h1 class="page-header text-overflow">{!! trans('role.role') !!}</h1>
+                <h1 class="page-header text-overflow">{{ trans('backend.role.lable') }}</h1>
             </div>
             <ol class="breadcrumb">
 				<li><a href="#"><i class="demo-pli-home"></i></a></li>
-				<li><a href="#">{!! trans('role.list') !!}</a></li>
+				<li><a href="#">{{ trans('backend.actions.list') }}</a></li>
             </ol>
         </div>
 		<div id="page-content">
@@ -21,7 +21,7 @@
 		            	<div class="pad-btm form-inline">
 				            <div class="row">
 				                <div class="col-sm-6 table-toolbar-left">
-				                   <a href="{{ route('roles.create') }}" id="demo-btn-addrow" class="btn btn-purple"><i class="demo-pli-add"></i> {!! trans('role.create') !!}</a>
+				                   <a href="{{ route('roles.create') }}" id="demo-btn-addrow" class="btn btn-purple"><i class="demo-pli-add"></i> {{ trans('backend.actions.add') }}</a>
 				                </div>
 				                <div class="col-sm-6 table-toolbar-right">
 				                    <div class="form-group col-sm-12">
@@ -39,10 +39,10 @@
 		                        <thead>
 		                            <tr>
 		                                <th class="text-center">#</th>
-		                                <th>{!! trans('role.code') !!}</th>
-		                                <th>{!! trans('role.name_display') !!}</th>
-		                                <th>{!! trans('role.description') !!}</th>
-		                                <th>{!! trans('role.actions') !!}</th>
+		                                <th>{{ trans('backend.role.code') }}</th>
+		                                <th>{{ trans('backend.role.display_name') }}</th>
+		                                <th>{{ trans('backend.role.desciption') }}</th>
+		                                <th>{{ trans('backend.actions.actions') }}</th>
 		                            </tr>
 		                        </thead>
 		                        <tbody>

@@ -19,7 +19,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Auth', 'middleware' => 'web']
     Route::get('login',  'LoginController@showLoginForm')->name('login');
     Route::post('login', 'LoginController@login');
     Route::get('logout', 'LoginController@logout')->name('logout');
-    Route::get('logoutdá', 'LoginController@logout')->name('register');
+    Route::get('register', 'LoginController@register')->name('register');
 });
 
 Route::group(['prefix' => 'admin/users'], function() {
@@ -30,8 +30,10 @@ Route::group(['prefix' => 'admin/users'], function() {
 });
 
 Route::resource('admin/roles', '\DangKien\RolePer\Controllers\RoleController');
-Route::resource('admin/permissions', '\DangKien\RolePer\Controllers\PermissionController');
-Route::resource('admin/permissions-group', '\DangKien\RolePer\Controllers\PermissionGroupController');
+Route::group(['prefix' => '', 'middleware' => 'role:superadmin'], function() {
+    Route::resource('admin/permissions', '\DangKien\RolePer\Controllers\PermissionController');
+    Route::resource('admin/permissions-group', '\DangKien\RolePer\Controllers\PermissionGroupController');
+});
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Backend'], function() {
     Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\controllers\LfmController@show');
