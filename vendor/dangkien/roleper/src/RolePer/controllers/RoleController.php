@@ -7,15 +7,15 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Permission;
 use App\Models\Role;
-use DB;
+use DB, Auth;
 
 class RoleController extends Controller
 {
-	private $roleModel;
+    private $roleModel;
 
     public function __construct(Role $roleModel)
     {
-    	$this->roleModel      = $roleModel;
+        $this->roleModel      = $roleModel;
     }
 
     public function index() {
@@ -37,10 +37,10 @@ class RoleController extends Controller
          * @return \Illuminate\Http\Response
          */
     public function store(Request $request) {
-    	$this->validate($request, array(
-			'name'         => 'required|unique:roles',
-			'display_name' => 'required|unique:roles',
-	    ));
+        $this->validate($request, array(
+            'name'         => 'required|unique:roles',
+            'display_name' => 'required|unique:roles',
+        ));
         $role = new Role();
         DB::beginTransaction();
         try {
@@ -71,8 +71,11 @@ class RoleController extends Controller
          * @return \Illuminate\Http\Response
          */
         public function edit($id)
-        {	
-        	$role = Role::findOrFail($id);
+        {   
+            $role = Role::findOrFail($id);
+            if ($role->name == config('roleper.superadmin') && Auth::check() && !Auth::user()->hasRole(config('roleper.superadmin')) ) {
+                return abort(403);
+            }
             return view("user_permission.role.add", array("role" => $role));
         }
         /**
@@ -85,12 +88,15 @@ class RoleController extends Controller
         public function update(Request $request, $id)
         {
             $this->validate($request, array(
-                'name'         => 'required|unique_rule:roles,$id',
+                'name'         => "required|unique_rule:roles,$id",
                 'display_name' => 'required'
             ));
             DB::beginTransaction();
             try {
                 $role               = $this->roleModel->findOrFail($id);
+                if ($role->name == config('roleper.superadmin') && Auth::check() && !Auth::user()->hasRole(config('roleper.superadmin')) ) {
+                    return abort(403);
+                }
                 $role->name         = $request->name;
                 $role->display_name = $request->display_name;
                 $role->description  = $request->description;
@@ -100,7 +106,7 @@ class RoleController extends Controller
             } catch (Exception $e) {
                 DB::rollback();
             }
-    		
+            
         }
         /**
          * Remove the specified resource from storage.
@@ -121,6 +127,6 @@ class RoleController extends Controller
             } catch (Exception $e) {
                 DB::rollback();
             }
-        	
+            
         }
 }
