@@ -85,8 +85,8 @@ class RoleController extends Controller
         public function update(Request $request, $id)
         {
             $this->validate($request, array(
-                'name'         => 'required',
-                'display_name' => 'required',
+                'name'         => 'required|unique_rule:roles,$id',
+                'display_name' => 'required'
             ));
             DB::beginTransaction();
             try {
