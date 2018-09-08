@@ -121,6 +121,6 @@ return [
     |
     */
     'permission_foreign_key' => 'permission_id',
-
-    'superadmin' => 'superadmin',
+	
+	'superadmin' => 'superadmin',
 ];

@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Hash;
 
 class UserSeed extends Seeder
 {
@@ -16,7 +15,7 @@ class UserSeed extends Seeder
 			'name'     => 'Dev Transoft',
 			'email'    => 'dev.transoft@gmail.com',
 			'password' =>  Hash::make('123456'),
-			'phone'    => '0123456789'
+			'phone'    => '0123456789',
 			'avatar'   => '1.png'
         ]);
 
