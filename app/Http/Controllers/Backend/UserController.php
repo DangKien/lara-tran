@@ -14,14 +14,14 @@ class UserController extends Controller
     {
         $this->userModel = $userModel;
 
-        // $this->middleware('permission:user.read', ['only' => ['list']]);
-        // $this->middleware('permission:user.read', ['only' => ['index']]);
-        // $this->middleware('permission:user.create',['only' => ['create']]);
-        // $this->middleware('permission:user.create', ['only' => ['store']]);
-        // $this->middleware('permission:user.read', ['only' => ['show']]);
-        // $this->middleware('permission:user.update', ['only' => ['edit']]);
-        // $this->middleware('permission:user.update', ['only' => ['update']]);
-        // $this->middleware('permission:user.delete', ['only' => ['destroy']]);
+        $this->middleware('permission:user.read', ['only' => ['list']]);
+        $this->middleware('permission:user.read', ['only' => ['index']]);
+        $this->middleware('permission:user.create',['only' => ['create']]);
+        $this->middleware('permission:user.create', ['only' => ['store']]);
+        $this->middleware('permission:user.read', ['only' => ['show']]);
+        $this->middleware('permission:user.update', ['only' => ['edit']]);
+        $this->middleware('permission:user.update', ['only' => ['update']]);
+        $this->middleware('permission:user.delete', ['only' => ['destroy']]);
     }
     /**
      * Display a listing of the resource.
