@@ -62,12 +62,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/DangKien/role-permisson.git",
-            "reference": "c2f16ac212006fc0c7a4535d9c7139ff35c9fcf5"
+            "reference": "27d30162d04809b4a1d7044e4deb44afa79f61c1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/DangKien/role-permisson/zipball/c2f16ac212006fc0c7a4535d9c7139ff35c9fcf5",
-            "reference": "c2f16ac212006fc0c7a4535d9c7139ff35c9fcf5",
+            "url": "https://api.github.com/repos/DangKien/role-permisson/zipball/27d30162d04809b4a1d7044e4deb44afa79f61c1",
+            "reference": "27d30162d04809b4a1d7044e4deb44afa79f61c1",
             "shasum": ""
         },
         "require": {
@@ -82,7 +82,7 @@
             "phpunit/phpunit": "~4.1",
             "sami/sami": "dev-master"
         },
-        "time": "2018-09-08T07:46:28+00:00",
+        "time": "2018-09-08T16:38:32+00:00",
         "type": "library",
         "extra": {
             "laravel": {
@@ -2311,17 +2311,17 @@
     },
     {
         "name": "phpunit/phpunit",
-        "version": "7.3.4",
-        "version_normalized": "7.3.4.0",
+        "version": "7.3.5",
+        "version_normalized": "7.3.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/phpunit.git",
-            "reference": "0356331bf62896dc56e3a15030b23b73f38b2935"
+            "reference": "7b331efabbb628c518c408fdfcaf571156775de2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0356331bf62896dc56e3a15030b23b73f38b2935",
-            "reference": "0356331bf62896dc56e3a15030b23b73f38b2935",
+            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7b331efabbb628c518c408fdfcaf571156775de2",
+            "reference": "7b331efabbb628c518c408fdfcaf571156775de2",
             "shasum": ""
         },
         "require": {
@@ -2360,7 +2360,7 @@
             "ext-xdebug": "*",
             "phpunit/php-invoker": "^2.0"
         },
-        "time": "2018-09-05T09:58:53+00:00",
+        "time": "2018-09-08T15:14:29+00:00",
         "bin": [
             "phpunit"
         ],

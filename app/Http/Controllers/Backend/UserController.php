@@ -14,14 +14,14 @@ class UserController extends Controller
     {
         $this->userModel = $userModel;
 
-        $this->middleware('permission:user.read', ['only' => ['list']]);
-        $this->middleware('permission:user.read', ['only' => ['index']]);
-        $this->middleware('permission:user.create',['only' => ['create']]);
-        $this->middleware('permission:user.create', ['only' => ['store']]);
-        $this->middleware('permission:user.read', ['only' => ['show']]);
-        $this->middleware('permission:user.update', ['only' => ['edit']]);
-        $this->middleware('permission:user.update', ['only' => ['update']]);
-        $this->middleware('permission:user.delete', ['only' => ['destroy']]);
+        // $this->middleware('permission:user.read', ['only' => ['list']]);
+        // $this->middleware('permission:user.read', ['only' => ['index']]);
+        // $this->middleware('permission:user.create',['only' => ['create']]);
+        // $this->middleware('permission:user.create', ['only' => ['store']]);
+        // $this->middleware('permission:user.read', ['only' => ['show']]);
+        // $this->middleware('permission:user.update', ['only' => ['edit']]);
+        // $this->middleware('permission:user.update', ['only' => ['update']]);
+        // $this->middleware('permission:user.delete', ['only' => ['destroy']]);
     }
     /**
      * Display a listing of the resource.
@@ -138,7 +138,16 @@ class UserController extends Controller
         try {
             $user->name     = $request->name;
             $user->phone    = $request->phone;
-            $user->status   = $request->status;
+            if ( $request->status == 'DISABLE') {
+                if (Auth::id() == $id || (!Auth::user()->hasRole(config('roleper.superadmin')) &&  $user->hasRole(config('roleper.superadmin'))) ) {
+                    return redirect()->back()->withInput()->withErrors(['status' => 'Update status failue']);
+                } else {
+                    $user->status = $request->status;
+                }
+                
+            } else {
+                $user->status = $request->status;
+            }
             $user->avatar   = $path;
             $user->save();
             DB::commit();
@@ -164,7 +173,6 @@ class UserController extends Controller
             } else {
                 DB::beginTransaction();
                 try {
-                    $user->delete();
                     DB::commit();
                     return response()->json(['status' => true], 200);
                 } catch (Exception $e) {

@@ -30,6 +30,9 @@
 			                <div class="panel-body col-sm-offset-2">
 			                    <div class="row">
 			                        <div class="col-sm-10">
+    	                                @if ($errors->has('error_role'))
+    		                            	<p class="text-left text-danger">{{ $errors->first('error_role') }}</p>
+    		                            @endif
 			                            <div class="form-group">
 			                                <label class="control-label">{{ trans('backend.user_role.name') }}</label>
 			                                <input type="text" name="name" class="form-control" 

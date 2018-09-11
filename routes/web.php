@@ -39,13 +39,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Backend'], function() {
     Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\controllers\LfmController@show');
     Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\controllers\UploadController@upload');
     
-    Route::resource('users', 'UserController');
 
     Route::get('users/profile', 'Backend\UserController@show')->name('users.profile');
     Route::post('users/profile', 'Backend\UserController@updateSeft')->name('users.updateProfile');
 
     Route::get('users/change-password', 'Backend\UserController@change')->name('users.change');
     Route::post('users/change-password', 'Backend\UserController@changePassword')->name('users.changePassword');
+
+    Route::resource('users', 'UserController');
 
     Route::resource('languages', 'LanguagesController', ['except'=>['destroy']]);
 
