@@ -62,12 +62,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/DangKien/role-permisson.git",
-            "reference": "396c8f461571b3bb9285efedb7113c727e3bdce3"
+            "reference": "bc79557ffcb7fc72dc969775124c8c576221955b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/DangKien/role-permisson/zipball/396c8f461571b3bb9285efedb7113c727e3bdce3",
-            "reference": "396c8f461571b3bb9285efedb7113c727e3bdce3",
+            "url": "https://api.github.com/repos/DangKien/role-permisson/zipball/bc79557ffcb7fc72dc969775124c8c576221955b",
+            "reference": "bc79557ffcb7fc72dc969775124c8c576221955b",
             "shasum": ""
         },
         "require": {
@@ -82,7 +82,7 @@
             "phpunit/phpunit": "~4.1",
             "sami/sami": "dev-master"
         },
-        "time": "2018-09-11T03:38:52+00:00",
+        "time": "2018-09-11T04:19:18+00:00",
         "type": "library",
         "extra": {
             "laravel": {
