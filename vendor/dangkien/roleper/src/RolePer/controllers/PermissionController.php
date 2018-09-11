@@ -9,12 +9,12 @@ use App\Models\Permission;
 use DB;
 
 class PermissionController extends Controller
-{	
-	private $permissionModel;
-	public function __construct(Permission $permissionModel)
-	{
-		$this->permissionModel = $permissionModel;
-	}
+{   
+    private $permissionModel;
+    public function __construct(Permission $permissionModel)
+    {
+        $this->permissionModel = $permissionModel;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -42,10 +42,10 @@ class PermissionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        	$this->validate($request, array(
-    			'name'         => 'required|unique:permissions',
-    			'display_name' => 'required',
-    	    ));
+            $this->validate($request, array(
+                'name'         => 'required|unique:permissions',
+                'display_name' => 'required',
+            ));
             DB::beginTransaction();
             try {
                 $this->permissionModel->name                = $request->name;
@@ -57,7 +57,7 @@ class PermissionController extends Controller
             } catch (Exception $e) {
                 DB::rollback();
             }
-    		return redirect()->route('permissions.index');
+            return redirect()->route('permissions.index');
     }
 
     /**
@@ -83,10 +83,10 @@ class PermissionController extends Controller
             'name'         => "required|unique_rule:permissions,$id",
             'display_name' => "required"
         ));
-    	$permission = $this->permissionModel::with('permission_group')
+        $permission = $this->permissionModel::with('permission_group')
                                             ->findOrFail($id);   
         return view("user_permission.permission.add", array("permission" => $permission));
-	}
+    }
 
     /**
      * Update the specified resource in storage.
@@ -109,7 +109,7 @@ class PermissionController extends Controller
         } catch (Exception $e) {
             DB::rollback();
         }
-		return redirect()->route('permissions.index');
+        return redirect()->route('permissions.index');
     }
 
     /**
@@ -130,7 +130,7 @@ class PermissionController extends Controller
             DB::rollback();
         }
         
-    	
-		return redirect()->route('permissions.index');
+        
+        return redirect()->route('permissions.index');
     }
 }
